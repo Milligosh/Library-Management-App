@@ -11,4 +11,12 @@ export class UserController {
             next(error)
         }
     }
+    static async login(req:Request,res:Response,next:NextFunction):Promise<any>{
+        try {
+            const result = await UserService.logIn(req.body)
+            return res.status(result.code).json(result)
+        } catch (error) {
+            next (error)
+        }
+    }
 }
