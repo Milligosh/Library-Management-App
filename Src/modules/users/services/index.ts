@@ -13,6 +13,7 @@ import config from '../../../config/env/development'
 
 
 
+
 export class UserService{
     static async createUser(body:any):Promise<any>{
         const {firstName,lastName,userName,email,password}= body
